@@ -9,9 +9,7 @@ import (
 	"github.com/docker/go-plugins-helpers/graphdriver"
 	"github.com/wrouesnel/go.log"
 
-	"github.com/wrouesnel/docker-bittorrent-graph-driver/graphdriver"
-
-	"flag"
+	"github.com/wrouesnel/docker-bittorrent-graph-driver/graphdriver/bittorrent_overlay2"
 )
 
 const (
