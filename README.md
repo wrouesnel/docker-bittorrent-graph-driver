@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/wrouesnel/docker-bittorrent-graph-driver.svg?branch=master)](https://travis-ci.org/wrouesnel/docker-bittorrent-graph-driver)
+
 # WIP: docker bittorrent graph driver
 
 ## Design
