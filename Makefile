@@ -8,14 +8,14 @@ TAG ?= latest
 CONTAINER_NAME ?= wrouesnel/$(PROGNAME):$(TAG)
 BUILD_CONTAINER ?= $(PROGNAME)_build
 
-all: vet test test-style $(PROGNAME)
+all: vet test style $(PROGNAME)
 
 vet:
 	go vet .
 
 # Check code conforms to go fmt
-test-style:
-	! gofmt -l $(GO_SRC) 2>&1 | read
+style:
+	! gofmt -l $(GO_SRC) 2>&1 | read 2>/dev/null
 
 # Test everything
 test:
@@ -31,4 +31,4 @@ $(PROGNAME): $(GO_SRC)
 	-ldflags "-extldflags '-static' -X main.Version=$(VERSION)" \
 	-o $(PROGNAME) .
 	
-.PHONY: vet test test-style
+.PHONY: vet test style
